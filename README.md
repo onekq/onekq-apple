@@ -58,7 +58,7 @@ The model will be downloaded from 🤗 HuggingFace 🤗 the first time you use i
 
 ## 📦 Installation
 
-👉 **[Download ONEKQ v0.1.0 DMG for macOS](https://github.com/onekq/onesql-desktop/releases/latest)**
+👉 **[Download ONEKQ v0.1.0 DMG for macOS](https://github.com/onekq/onekq-apple/releases/latest)**
 
 1. Open the DMG  
 2. Drag **ONEKQ** into your Applications folder  
@@ -85,7 +85,7 @@ To see debug traces, start the app from the terminal.
 /Applications/ONEKQ.app/Contents/MacOS/onekq
 ```
 
-Still stuck? [Open an issue on GitHub](https://github.com/onekq/onesql-desktop/issues)
+Still stuck? [Open an issue on GitHub](https://github.com/onekq/onekq-apple/issues)
 
 ---
 
