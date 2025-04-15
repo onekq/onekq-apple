@@ -1,0 +1,25 @@
+{
+  "build": {
+    "beforeBuildCommand": "",
+    "beforeDevCommand": "",
+    "devPath": "../src",
+    "distDir": "../src"
+  },
+  "package": {
+    "productName": "onekq",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "bundle": {
+      "identifier": "ai.onekq.desktop",
+      "icon": ["icons/onekq.icns"]
+    },
+    "windows": [
+      {
+        "title": "ONEKQ",
+        "width": 1200,
+        "height": 800
+      }
+    ]
+  }
+}

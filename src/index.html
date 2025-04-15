@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Three-Pane SQL IDE</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/node-sql-parser/umd/index.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <div id="layout">
+    <!-- Main Content: Left and Right Panes -->
+    <div id="content">
+      <div id="left-pane">
+        <div id="logo">
+          <span id="logo-1">ONE</span><span id="logo-k">K</span><span id="logo-q">Q</span>
+        </div>
+        <div id="left-editor" class="editor-container"></div>
+      </div>
+      <div class="resizer" id="dragbar"></div>
+      <div id="right-pane">
+        <div id="top-right-pane">
+          <div id="tabs"></div>
+          <div id="tab-editors"></div>
+        </div>
+        <div id="horizontal-resizer"></div>
+        <!-- Bottom-right NL panel: Model Selector at top, NL input below -->
+        <div id="bottom-right">
+          <div id="nl-selector">
+            <label for="model-select">OneSQL Model:</label>
+            <select id="model-select">
+              <option value="onekq-ai/OneSQL-v0.1-Qwen-7B-MLX-4bit">V0.1-7B</option>
+              <option value="onekq-ai/OneSQL-v0.1-Qwen-3B-MLX-4bit">V0.1-3B</option>
+              <option value="onekq-ai/OneSQL-v0.1-Qwen-1.5B-MLX-4bit">V0.1-1.5B</option>
+            </select>
+          </div>
+          <div id="nl-editor">
+            <textarea id="nl-input" placeholder="Ask a question in natural language..."></textarea>
+            <button id="send-btn">↑</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="progress-container" style="display: none;">
+    <progress id="model-progress" max="100" value="0"></progress>
+    <span id="progress-text"></span>
+    <button id="cancel-download">Cancel</button>
+  </div>
+
+  <div id="custom-dialog">
+    <div class="modal-content">
+      <p id="dialog-message"></p>
+      <button onclick="closeDialog()">OK</button>
+    </div>
+  </div>
+  <div id="share-menu" class="hidden">
+    <div class="share-menu-content">
+      <p>Share this app:</p>
+      <div class="share-buttons">
+        <button data-type="email">Email</button>
+        <button data-type="linkedin">LinkedIn</button>
+        <button data-type="twitter">Twitter/X</button>
+        <button data-type="reddit">Reddit</button>
+        <button id="copy-link">Copy Link</button>
+      </div>
+    </div>
+  </div>
+  <div id="backend-overlay">
+    <div class="backend-message">
+      🚧 Initializing... waiting for backend to be ready.
+    </div>
+  </div>
+  <footer id="footer-bar">
+    <div>
+      Contact us: <a href="#" id="email-link">developers@onekq.ai</a> |
+      Join discussion on <a href="#" id="github-link">Github</a>
+    </div>
+  </footer>
+</body>
+</html>

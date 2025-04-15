@@ -1,0 +1,16 @@
+{
+  "name": "onekq",
+  "version": "0.1.0",
+  "description": "OneKQ: Tauri-based SQL IDE powered by local LLM",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.6.3"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.4.1"
+  }
+}
